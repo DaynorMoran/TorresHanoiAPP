@@ -1,8 +1,8 @@
 namespace TorresAPP
 {
-    public partial class Form1 : Form
+    public partial class HanoiAPP : Form
     {
-        public Form1()
+        public HanoiAPP()
         {
             InitializeComponent();
         }        
