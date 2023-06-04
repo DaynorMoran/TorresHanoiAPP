@@ -1,6 +1,6 @@
 ﻿namespace TorresAPP
 {
-    partial class HanoiAPP
+    partial class Hanoiform
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HanoiAPP));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Hanoiform));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panelT1 = new System.Windows.Forms.Panel();
+            this.pboxT1 = new System.Windows.Forms.PictureBox();
+            this.panelT2 = new System.Windows.Forms.Panel();
+            this.pboxt2 = new System.Windows.Forms.PictureBox();
+            this.panelT3 = new System.Windows.Forms.Panel();
+            this.pboxT3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelBotones = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
@@ -46,59 +49,86 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.button8 = new System.Windows.Forms.Button();
+            this.spn_cantidad = new System.Windows.Forms.NumericUpDown();
+            this.btn_nuevo_juego = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panelT1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxT1)).BeginInit();
+            this.panelT2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxt2)).BeginInit();
+            this.panelT3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxT3)).BeginInit();
             this.panel2.SuspendLayout();
             this.panelBotones.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spn_cantidad)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(248)))), ((int)(((byte)(226)))));
-            this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.panelT1);
+            this.panel1.Controls.Add(this.panelT2);
+            this.panel1.Controls.Add(this.panelT3);
             this.panel1.Location = new System.Drawing.Point(202, 69);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(770, 431);
+            this.panel1.Size = new System.Drawing.Size(700, 381);
             this.panel1.TabIndex = 0;
             // 
-            // pictureBox4
+            // panelT1
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(499, 81);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(256, 514);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
+            this.panelT1.Controls.Add(this.pboxT1);
+            this.panelT1.Location = new System.Drawing.Point(34, 19);
+            this.panelT1.Name = "panelT1";
+            this.panelT1.Size = new System.Drawing.Size(200, 350);
+            this.panelT1.TabIndex = 1;
             // 
-            // pictureBox3
+            // pboxT1
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(249, 81);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(256, 514);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
+            this.pboxT1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pboxT1.Image = ((System.Drawing.Image)(resources.GetObject("pboxT1.Image")));
+            this.pboxT1.Location = new System.Drawing.Point(0, 0);
+            this.pboxT1.Name = "pboxT1";
+            this.pboxT1.Size = new System.Drawing.Size(200, 350);
+            this.pboxT1.TabIndex = 0;
+            this.pboxT1.TabStop = false;
             // 
-            // pictureBox2
+            // panelT2
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 81);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(256, 514);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.panelT2.Controls.Add(this.pboxt2);
+            this.panelT2.Location = new System.Drawing.Point(250, 19);
+            this.panelT2.Name = "panelT2";
+            this.panelT2.Size = new System.Drawing.Size(200, 350);
+            this.panelT2.TabIndex = 2;
+            // 
+            // pboxt2
+            // 
+            this.pboxt2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pboxt2.Image = ((System.Drawing.Image)(resources.GetObject("pboxt2.Image")));
+            this.pboxt2.Location = new System.Drawing.Point(0, 0);
+            this.pboxt2.Name = "pboxt2";
+            this.pboxt2.Size = new System.Drawing.Size(200, 350);
+            this.pboxt2.TabIndex = 0;
+            this.pboxt2.TabStop = false;
+            // 
+            // panelT3
+            // 
+            this.panelT3.Controls.Add(this.pboxT3);
+            this.panelT3.Location = new System.Drawing.Point(466, 19);
+            this.panelT3.Name = "panelT3";
+            this.panelT3.Size = new System.Drawing.Size(200, 350);
+            this.panelT3.TabIndex = 2;
+            // 
+            // pboxT3
+            // 
+            this.pboxT3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pboxT3.Image = ((System.Drawing.Image)(resources.GetObject("pboxT3.Image")));
+            this.pboxT3.Location = new System.Drawing.Point(0, 0);
+            this.pboxT3.Name = "pboxT3";
+            this.pboxT3.Size = new System.Drawing.Size(200, 350);
+            this.pboxT3.TabIndex = 0;
+            this.pboxT3.TabStop = false;
             // 
             // panel2
             // 
@@ -266,62 +296,66 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Cantidad de discos:";
             // 
-            // numericUpDown1
+            // spn_cantidad
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.numericUpDown1.Location = new System.Drawing.Point(355, 23);
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.spn_cantidad.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.spn_cantidad.Location = new System.Drawing.Point(355, 23);
+            this.spn_cantidad.Minimum = new decimal(new int[] {
             3,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(63, 29);
-            this.numericUpDown1.TabIndex = 3;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.spn_cantidad.Name = "spn_cantidad";
+            this.spn_cantidad.Size = new System.Drawing.Size(63, 29);
+            this.spn_cantidad.TabIndex = 3;
+            this.spn_cantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.spn_cantidad.Value = new decimal(new int[] {
             3,
             0,
             0,
             0});
             // 
-            // button8
+            // btn_nuevo_juego
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(162)))), ((int)(((byte)(67)))));
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(248)))), ((int)(((byte)(226)))));
-            this.button8.Location = new System.Drawing.Point(428, 13);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(180, 50);
-            this.button8.TabIndex = 4;
-            this.button8.Text = "Nuevo Juego";
-            this.button8.UseVisualStyleBackColor = false;
+            this.btn_nuevo_juego.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(162)))), ((int)(((byte)(67)))));
+            this.btn_nuevo_juego.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_nuevo_juego.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_nuevo_juego.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(248)))), ((int)(((byte)(226)))));
+            this.btn_nuevo_juego.Location = new System.Drawing.Point(428, 13);
+            this.btn_nuevo_juego.Name = "btn_nuevo_juego";
+            this.btn_nuevo_juego.Size = new System.Drawing.Size(180, 50);
+            this.btn_nuevo_juego.TabIndex = 4;
+            this.btn_nuevo_juego.Text = "Nuevo Juego";
+            this.btn_nuevo_juego.UseVisualStyleBackColor = false;
+            this.btn_nuevo_juego.Click += new System.EventHandler(this.btn_nuevo_juego_Click);
             // 
-            // HanoiAPP
+            // Hanoiform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(35)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(984, 508);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btn_nuevo_juego);
+            this.Controls.Add(this.spn_cantidad);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Name = "HanoiAPP";
-            this.Text = "Form1";
+            this.Name = "Hanoiform";
+            this.Text = "Hanoi APP";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panelT1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pboxT1)).EndInit();
+            this.panelT2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pboxt2)).EndInit();
+            this.panelT3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pboxT3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panelBotones.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spn_cantidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -342,11 +376,14 @@
         private Button button4;
         private Button button3;
         private Label label1;
-        private NumericUpDown numericUpDown1;
+        private NumericUpDown spn_cantidad;
         private Label label2;
-        private Button button8;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox3;
+        private Button btn_nuevo_juego;
+        private Panel panelT1;
+        private Panel panelT3;
+        private Panel panelT2;
+        private PictureBox pboxT1;
+        private PictureBox pboxt2;
+        private PictureBox pboxT3;
     }
 }
