@@ -1,23 +1,30 @@
+using System.Media;
+
 namespace TorresAPP
 {
     public partial class Hanoiform : Form
     {
+        
+
         Stack<Label> Torre1 = new Stack<Label>();
         public Hanoiform()
         {
             InitializeComponent();
-
             
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
-
-        private void btn_nuevo_juego_Click(object sender, EventArgs e)
+        private async void btn_nuevo_juego_Click(object sender, EventArgs e)
         {
+            SoundPlayer player = new SoundPlayer(Properties.Resources.golpe);
+
+            // Reproducir el sonido
+            
+
+
             //Limpiamos la primera pila correspondiente a torre1
             Torre1.Clear();
             // COn esta linea limpiamos las torres
@@ -41,13 +48,12 @@ namespace TorresAPP
                 // Establecer la posición en el formulario (x, y)
                 label.Size = new Size(tamx, tamy);
                 // Establecer el tamaño del Label (ancho, alto)
-                label.Text = string.Format("[{0}]", i);
-                //label.Font = new Font(label.Font, FontStyle.Bold); // Establecer estilo de fuente en negrita
-                label.Font = new Font(label.Font.FontFamily, 5, FontStyle.Bold); // Establecer fuente con tamaño y estilo
+                label.Text = string.Format("{0}", i);
+                
+                label.Font = new Font(label.Font.FontFamily, 8, FontStyle.Bold); // Establecer fuente con tamaño y estilo
 
 
-
-                tamx -= panelT1.Width / 10;//Dividir entre numero de discos
+                tamx -= panelT1.Width / nuevo;//Dividir entre numero de discos
 
                 posx = (panelT1.Width - tamx) / 2;//posx = posx - 10;
                 posy = posy - tamy; // Agregar un espaciado entre los labels
@@ -62,15 +68,15 @@ namespace TorresAPP
                 switch (rcolor)
                 {
                     case 1: label.BackColor = Color.Yellow; break;
-                    case 2: label.BackColor = Color.Blue; break;
+                    case 2: label.BackColor = Color.DodgerBlue; break;
                     case 3: label.BackColor = Color.Green; break;
-                    case 4: label.BackColor = Color.Purple; break;
+                    case 4: label.BackColor = Color.Goldenrod; break;
                     case 5: label.BackColor = Color.Thistle; break;
                     case 6: label.BackColor = Color.Crimson; break;
                     case 7: label.BackColor = Color.Chocolate; break;
-                    case 8: label.BackColor = Color.SpringGreen; break;
+                    case 8: label.BackColor = Color.OliveDrab; break;
                     case 9: label.BackColor = Color.Cyan; break;
-                    case 10: label.BackColor = Color.Sienna; break;
+                    case 10: label.BackColor = Color.Lime; break;
                     default:
                         rcolor = 0;
                         break;
@@ -78,9 +84,8 @@ namespace TorresAPP
                 // Agregar el Label al formulario                
                 pboxT1.Controls.Add(label);
                 Torre1.Push(label); // Agregar el Label a la pila
-
-
-
+                player.Play();
+                await Task.Delay(150); // Esperar
             }
 
         }

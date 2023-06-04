@@ -300,6 +300,11 @@
             // 
             this.spn_cantidad.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.spn_cantidad.Location = new System.Drawing.Point(355, 23);
+            this.spn_cantidad.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             this.spn_cantidad.Minimum = new decimal(new int[] {
             3,
             0,

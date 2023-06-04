@@ -59,5 +59,14 @@ namespace TorresAPP.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream golpe {
+            get {
+                return ResourceManager.GetStream("golpe", resourceCulture);
+            }
+        }
     }
 }
