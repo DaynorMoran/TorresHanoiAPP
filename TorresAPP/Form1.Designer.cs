@@ -50,7 +50,7 @@
             this.btn_salir = new System.Windows.Forms.Button();
             this.btn_reglas = new System.Windows.Forms.Button();
             this.btn_cantidadmovimientos = new System.Windows.Forms.Button();
-            this.btn_resolver = new System.Windows.Forms.Button();
+            this.btn_como = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -284,7 +284,7 @@
             this.panelBotones.Controls.Add(this.btn_salir);
             this.panelBotones.Controls.Add(this.btn_reglas);
             this.panelBotones.Controls.Add(this.btn_cantidadmovimientos);
-            this.panelBotones.Controls.Add(this.btn_resolver);
+            this.panelBotones.Controls.Add(this.btn_como);
             this.panelBotones.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBotones.Location = new System.Drawing.Point(0, 150);
             this.panelBotones.Name = "panelBotones";
@@ -336,19 +336,20 @@
             this.btn_cantidadmovimientos.UseVisualStyleBackColor = false;
             this.btn_cantidadmovimientos.Click += new System.EventHandler(this.btn_cantidadmovimientos_Click);
             // 
-            // btn_resolver
+            // btn_como
             // 
-            this.btn_resolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(162)))), ((int)(((byte)(67)))));
-            this.btn_resolver.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_resolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_resolver.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_resolver.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(248)))), ((int)(((byte)(226)))));
-            this.btn_resolver.Location = new System.Drawing.Point(0, 0);
-            this.btn_resolver.Name = "btn_resolver";
-            this.btn_resolver.Size = new System.Drawing.Size(180, 80);
-            this.btn_resolver.TabIndex = 0;
-            this.btn_resolver.Text = "Resolver";
-            this.btn_resolver.UseVisualStyleBackColor = false;
+            this.btn_como.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(162)))), ((int)(((byte)(67)))));
+            this.btn_como.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_como.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_como.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_como.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(248)))), ((int)(((byte)(226)))));
+            this.btn_como.Location = new System.Drawing.Point(0, 0);
+            this.btn_como.Name = "btn_como";
+            this.btn_como.Size = new System.Drawing.Size(180, 80);
+            this.btn_como.TabIndex = 0;
+            this.btn_como.Text = "Muestrame como jugar";
+            this.btn_como.UseVisualStyleBackColor = false;
+            this.btn_como.Click += new System.EventHandler(this.btn_como_Click);
             // 
             // panelLogo
             // 
@@ -471,7 +472,7 @@
         private Panel panel1;
         private Panel panel2;
         private Panel panelBotones;
-        private Button btn_resolver;
+        private Button btn_como;
         private Panel panelLogo;
         private PictureBox pictureBox1;
         private Button btn_cantidadmovimientos;

@@ -375,9 +375,6 @@ namespace TorresAPP
         }
         //*********************************************************************
 
-
-
-
         private void btn_cantidadmovimientos_Click(object sender, EventArgs e)
         {
             if (cantidaddemovimientos == 0)
@@ -409,7 +406,126 @@ namespace TorresAPP
             Dispose();
         }
 
+        private async void btn_como_Click(object sender, EventArgs e)
+        {
+            //Deshabilito algunos botones para evitar 
+            //La modificacion de la torre1 al momento de su creacion
+            btn_nuevo_juego.Enabled = false;
+            btn_como.Enabled = false;
+            //Limpio las pilas(Stack)
+            PilaTorre1.Clear();
+            PilaTorre2.Clear();
+            PilaTorre3.Clear();
+            // Con esta linea limpiamos las torres graficamente
+            pboxT1.Controls.Clear();
+            pboxT2.Controls.Clear();
+            pboxT3.Controls.Clear();
+            //Pare resetear las posiciones en las torres
+            //Torre1
+            posxT1 = 0;
+            posyT1 = 245;
+
+            deshabilitarBotones();
+
+            //Guardo el valor del NumericUpDown
+            cantidaddiscos = (int)spn_cantidad.Value;
+
+            Label label;
+
+            //calculo el tamaño que tendran los discos
+            //usando como referencia el ancho de los paneles del formulario
+            int tamx = panelT1.Width;
+            //Este sera el alto que tendra cada disco.
+            int tamy = 25;
+
+            //Las sgtes dos lineas me serviran para los colores
+            int rcolor = 0;
+            Random ran = new Random();
+            // Crear una nueva instancia de Label
+            // hasta la cantidad seleccionada en el NumericUpDDown
+            for (int i = 1; i <= 3; i++)
+            {
+                label = new Label();
+                label.Name = "label" + i.ToString();
+                label.Location = new Point(posxT1, posyT1);
+                // Establecer la posición en el formulario (x, y)
+                label.Size = new Size(tamx, tamy);
+                // Establecer el tamaño del Label (ancho, alto)
+                label.Text = string.Format("{0}", i);
+
+                label.Font = new Font(label.Font.FontFamily, 8, FontStyle.Bold); // Establecer fuente con tamaño y estilo
+
+                //Dividir entre numero de discos
+                tamx -= panelT1.Width / cantidaddiscos;
+
+                posxT1 = (panelT1.Width - tamx) / 2;
+                posyT1 = posyT1 - tamy; // Agregar un espaciado entre los labels
+
+                //Esta variable es para que los colores no se repitan seguidos
+                int anteriorcolor = rcolor;
+
+                rcolor = ran.Next(1, 10);
+                do
+                {
+                    rcolor = ran.Next(1, 11);
+                } while (rcolor == anteriorcolor);
+                anteriorcolor = rcolor;
+                //Aqui le asigno un color respecto al numero random generado
+                switch (rcolor)
+                {
+                    case 1: label.BackColor = Color.Yellow; break;
+                    case 2: label.BackColor = Color.DodgerBlue; break;
+                    case 3: label.BackColor = Color.Green; break;
+                    case 4: label.BackColor = Color.Goldenrod; break;
+                    case 5: label.BackColor = Color.Thistle; break;
+                    case 6: label.BackColor = Color.Crimson; break;
+                    case 7: label.BackColor = Color.Chocolate; break;
+                    case 8: label.BackColor = Color.OliveDrab; break;
+                    case 9: label.BackColor = Color.Cyan; break;
+                    case 10: label.BackColor = Color.Lime; break;
+
+                }
+                // Agregar el Label al formulario                
+                pboxT1.Controls.Add(label);
+                // Agregar el Label a la pila de la Torre 1
+                PilaTorre1.Push(label); 
+                //Sonidito
+                sonidobloques.Play();
+
+                await Task.Delay(250); // Esperar
+            }
+            await Task.Delay(1000); // Esperar
 
 
+            /*******************************************************/
+            //Muestro ventanas emergentes para poner en contexto al usuario
+            MessageBox.Show("Al principo se tiene una torre con todos los discos.", "Mensaje", MessageBoxButtons.OK);
+            MessageBox.Show("La idea es Pasar todos los discos de una torre a otra.", "Mensaje", MessageBoxButtons.OK);
+            MessageBox.Show("No se puede poner un disco grande encima de uno pequeño.", "Mensaje", MessageBoxButtons.OK);
+
+
+            moverDisco(ref PilaTorre1, ref PilaTorre2, "Torre2");
+            await Task.Delay(560); // Esperar
+            moverDisco(ref PilaTorre1, ref PilaTorre3, "Torre3");
+            await Task.Delay(600); // Esperar
+            moverDisco(ref PilaTorre2, ref PilaTorre3, "Torre3");
+            await Task.Delay(600); // Esperar
+            moverDisco(ref PilaTorre1, ref PilaTorre2, "Torre2");
+            await Task.Delay(600); // Esperar
+            moverDisco(ref PilaTorre3, ref PilaTorre1, "Torre1");
+            await Task.Delay(600); // Esperar
+            moverDisco(ref PilaTorre3, ref PilaTorre2, "Torre2");
+            await Task.Delay(600); // Esperar
+            moverDisco(ref PilaTorre1, ref PilaTorre2, "Torre2");
+            await Task.Delay(600); // Esperar
+
+            btn_como.Enabled = true;
+            btn_nuevo_juego.Enabled = true;
+
+            sonidoinicio.Play();
+            MessageBox.Show("¡Asi es como se juega...!!!\n" +
+                "Cantidad de movimientos: " + cantidaddemovimientos);
+            deshabilitarBotones();
+        }
     }
 }
