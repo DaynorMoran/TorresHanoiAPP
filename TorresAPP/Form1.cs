@@ -408,6 +408,7 @@ namespace TorresAPP
 
         private async void btn_como_Click(object sender, EventArgs e)
         {
+            cantidaddemovimientos = 0;
             //Deshabilito algunos botones para evitar 
             //La modificacion de la torre1 al momento de su creacion
             btn_nuevo_juego.Enabled = false;
